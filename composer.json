@@ -1,0 +1,14 @@
+{
+    "name": "black_chaose/dictionary",
+    "description": "dictionary module or Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita",
+            "email": "nikita.s.kalitin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
