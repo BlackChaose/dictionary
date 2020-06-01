@@ -14,7 +14,6 @@ class DictionaryServiceProvider extends ServiceProvider
     public function register()
     {
         //
-
         $this->app->make('BlackChaose\Dictionary\Controllers\DictionaryController');
         $this->app->make('BlackChaose\Dictionary\Models\Dictionary');
     }
@@ -26,10 +25,8 @@ class DictionaryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
-        //fixme:
         $this->loadViewsFrom(__DIR__.'/Views/dictionary', 'BlackChaose\Dictionary');
         $this->publishes([
             __DIR__.'/Views/dictionary' => resource_path('/views/vendor/dictionary'),

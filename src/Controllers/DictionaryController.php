@@ -20,9 +20,7 @@ class DictionaryController extends Controller
     {
 
         $arr = Dictionary::with('attached_file')->get();
-        // dd($arr[1]->attached_file->where('dic_entity_id','=','2')->first()->file_path);
-        //dd($arr, $arr->toArray(), $arr->last()->attached_file->last()->file_name);
-        //   dd($arr->last()->attached_file()->get()->where('dic_entity_id','=',$arr->last()->id)->file_name);
+
         return view('vendor.dictionary.dictionary', ['arr' => $arr]);
     }
 
@@ -46,7 +44,6 @@ class DictionaryController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
         try {
             $data = $request->validate([
                 'entity' => 'string|min:1|max:255|required',
