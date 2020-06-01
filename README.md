@@ -4,6 +4,15 @@
 
 #### module in dev!  ####
 
-License: ISC
+#### License: ISC ####
+
+for install:
+
+``` composer require black_chaose/dictionary ```
+
+``` php artisan migrate ```
+
+``` php artisan vendor:publish --provider="BlackChaose\Dictionary\DictionaryServiceProvider"```
+
 
 
