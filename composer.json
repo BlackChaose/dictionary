@@ -16,6 +16,13 @@
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.1"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "wisdmlabs\\todolist\\TodolistServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "BlackChaose\\Dictionary\\": "src/"
