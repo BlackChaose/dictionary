@@ -15,9 +15,16 @@
         <div class="valid-feedback">
             ok!
         </div>
-        {{ Form::text('lang',null,['class'=>'form-control is-invalid', 'required'=>'required', 'placeholder'=>'ES->RU']) }}
+        {{ Form::text('lang',null,['class'=>'form-control is-invalid', 'required'=>'required', 'placeholder'=>'ES->RU', 'value'=>'ES-RU']) }}
         <div class="invalid-feedback">
             Добавьте язык, например испанско-русский - "ES->RU"
+        </div>
+        <div class="valid-feedback">
+            ok!
+        </div>
+        {{ Form::text('group_id',null,['class'=>'form-control is-invalid', 'required'=>'required', 'placeholder'=>'1', 'value'=>'1']) }}
+        <div class="invalid-feedback">
+            Добавьте номер группы терминов
         </div>
         <div class="valid-feedback">
             ok!
@@ -51,6 +58,13 @@
         {{ Form::text('lang',null,['class'=>'form-control is-invalid', 'required'=>'required', 'placeholder'=>'ES->RU']) }}
         <div class="invalid-feedback">
             Добавьте язык, например испанско-русский - "ES->RU"
+        </div>
+        <div class="valid-feedback">
+            ok!
+        </div>
+        {{ Form::text('group_id',null,['class'=>'form-control is-invalid', 'required'=>'required', 'placeholder'=>'1', 'value'=>'1']) }}
+        <div class="invalid-feedback">
+            Добавьте номер группы терминов
         </div>
         <div class="valid-feedback">
             ok!

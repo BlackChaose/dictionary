@@ -48,7 +48,8 @@ class DictionaryController extends Controller
             $data = $request->validate([
                 'entity' => 'string|min:1|max:255|required',
                 'value' => 'string|min:1|max:255|required',
-                'lang' => 'string|min:6|max:6|required'
+                'lang' => 'string|min:6|max:6|required',
+                'group_id' => 'integer|min:1|required',
             ]);
             if (empty($data)) {
                 throw(new \Exception('Error! invalid form data!'));
@@ -122,7 +123,8 @@ class DictionaryController extends Controller
             $data = $request->validate([
                 'entity' => 'string|min:1|max:255|required',
                 'value' => 'string|min:1|max:255|required',
-                'lang' => 'string|min:6|max:6|required'
+                'lang' => 'string|min:6|max:6|required',
+                'group_id' => 'integer|min:1|required',
             ]);
             if (empty($data)) {
                 throw(new \Exception('Error! invalid form data!'));
@@ -180,5 +182,22 @@ class DictionaryController extends Controller
         }
         $form_type= 'operationa_result';
         return view('vendor.dictionary.settings', ['form_type' => $form_type, 'result' => $res, 'result_code' => $result_code]);
+    }
+
+    public function slideshow(){
+    return redirect(route('dictionary.slideshow_group',['id'=>1]),'301');
+}
+
+    public function slideshow_group($id){
+        $dictionaries = Dictionary::with('attached_file')->get();
+        $groups = $dictionaries->unique('group_id')->map(function($el){
+            return $el->group_id;
+        });
+        $current_group = $id;
+        return view('vendor.dictionary.slideshow',[
+            'dictionaries'=>$dictionaries->where('group_id','=',$id),
+            'groups'=>$groups,
+            'current_group'=>$current_group,
+        ]);
     }
 }

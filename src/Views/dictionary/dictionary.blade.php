@@ -33,6 +33,10 @@
                 document.getElementById('btn_add_dic').addEventListener('click', function () {
                     window.location.href = "{{route('dictionary.create')}}";
                 });
+                document.getElementById('btn_view_slides').addEventListener('click',function(){
+                    console.log('!')
+                    window.location.href = "{{route('dictionary.slideshow')}}";
+                })
             });
         })();
     </script>

@@ -13,6 +13,7 @@ class Dictionary extends Model
         'entity',
         'value',
         'file_path',
+        'group_id',
         'transcription',
         'type',
         'lang',
