@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "wisdmlabs\\todolist\\TodolistServiceProvider"
+                "BlackChaose\\Dictionary\\DictionaryServiceProvider"
             ]
         }
     },
