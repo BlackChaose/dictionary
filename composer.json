@@ -1,12 +1,15 @@
 {
     "name": "black_chaose/dictionary",
-    "description": "dictionary module or Laravel",
+    "description": "dictionary module(package) for Laravel",
     "type": "library",
+	"version":"1.0.0-dev",
+	"keywords":"dictionary",
     "license": "ISC",
     "authors": [
         {
-            "name": "Nikita",
-            "email": "nikita.s.kalitin@gmail.com"
+            "name": "Nikita Kalitin",
+            "email": "nikita.s.kalitin@gmail.com",
+			"role": "developer"
         }
     ],
     "minimum-stability": "dev",
