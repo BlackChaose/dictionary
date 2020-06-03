@@ -7,10 +7,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use BlackChaose\Dictionary\Models\Dictionary;
 use Illuminate\Support\Carbon;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class DictionaryController extends Controller
 {
+    use AuthenticatesUsers;
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
+    protected $guardName = 'user';
+
     /**
      * Display a listing of the resource.
      *
