@@ -3,7 +3,7 @@
     "description": "dictionary module(package) for Laravel",
     "type": "library",
 	"version":"1.0.0-dev",
-	"keywords":"dictionary",
+	"keywords":["dictionary"],
     "license": "ISC",
     "authors": [
         {
