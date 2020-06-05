@@ -14,5 +14,19 @@ for install:
 
 ``` php artisan vendor:publish --provider="BlackChaose\Dictionary\DictionaryServiceProvider"```
 
+``` npm install datatables.net ```
+
+```npm install datatables.net-bs4 ```
+
+```npm install ```
+
+```npm run dev ```
+
+and add to resources\js\app.js:
+
+```require('datatables.net');```
+
+```require('datatables.net-bs4'); ```
+
 
 
