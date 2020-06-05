@@ -13,13 +13,10 @@
                 <div class="carousel-inner">
 
                     @foreach($dictionaries as $dic)
-                       <div class="carousel-item {{($loop->index === 0)?'active':null}}">
+                       <div class="carousel-item {{($loop->index === 0)?'active':null}}" style="min-height: 200px;">
                            @if(count($dic->attached_file)>0)
                             <img class="d-block w-100" src="{{url($dic->attached_file->first()->file_path)}}"
                                      alt="{{$dic->attached_file->first()->file_name}}">
-
-                           @else
-                               <div class="display-1 d-block w-100 text-center" style="min-height: 300px !important;"><i class="far fa-question-circle"></i></div>
                            @endif
                             <div class="carousel-caption">
                                  <h4 class="display-4 bg-white text-danger"><b>{{$dic->entity}}</b></h4>
