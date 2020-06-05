@@ -1,6 +1,6 @@
 @extends('vendor.dictionary.layouts.module')
 @section('content')
-    <p><a href="{{route('dictionary.index')}}">Словарик</a> / Cлайд-шоу: </p>
+    <p><a href="{{route('home')}}">Главная</a>/<a href="{{route('dictionary.index')}}">Словарик</a> / Cлайд-шоу: </p>
     @if(count($groups)>0)
         <ul class="nav nav-tabs">
         @foreach($groups as $group)
