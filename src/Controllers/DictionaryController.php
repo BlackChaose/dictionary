@@ -199,4 +199,8 @@ class DictionaryController extends Controller
             'current_group'=>$current_group,
         ]);
     }
+    public function show_cards(){
+
+        return view('vendor.dictionary.cards');
+    }
 }
